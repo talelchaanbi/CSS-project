@@ -1,0 +1,142 @@
+/* ===== Import Roboto font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* ===== General styles ===== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== Navbar styles ===== */
+nav {
+    background-color: #222;
+    color: white;
+    padding: 5px 20px;       /* hauteur réduite */
+    display: flex;           /* flexbox pour centrer */
+    align-items: center;     /* centre verticalement */
+    justify-content: center; /* centre horizontalement */
+    gap: 30px;               /* espace entre titre et liens */
+}
+
+nav h2 {
+    margin: 0;               /* supprime margin qui repousse */
+    font-weight: 700;
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 15px;               /* espace entre les liens */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Home Section */
+#home {
+    text-align: center; /* centre le texte */
+}
+
+#home img {
+    display: block;
+    margin: 20px auto; /* centre l'image */
+    border-radius: 10px;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* Video */
+video {
+    display: block;
+    margin: 20px auto; /* centre la vidéo */
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #222;
+    color: white;
+}
+
+/* Form styling */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #222;
+    outline: none;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
