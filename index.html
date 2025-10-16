@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- barre de titre -->
+    <title>Nelson Mandela - Portfolio</title>
+
+    <!-- favicon pour l'onglet du navigateur -->
+    <link
+      rel="shortcut icon"
+      href="https://icons.iconarchive.com/icons/aha-soft/standard-portfolio/128/Resume-icon.png"
+      type="image/x-icon"
+    />
+</head>
+
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <!-- Barre de navigation avec liens vers chaque section de la page -->
+  <nav>
+    <h2>Nelson Mandela</h2>
+    <a href="#home">Home</a> |
+    <a href="#about">About</a> |
+    <a href="#work">Work</a> |
+    <a href="#resume">Resume</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ==================== HOME SECTION ==================== -->
+  <!-- Section d'accueil avec titre, description et image -->
+  <section id="home">
+    <h1>Welcome to Nelson Mandela’s Portfolio</h1>
+    <p>Freedom Fighter • Leader • Nobel Peace Prize Winner</p>
+    <img src="./assets/image/mandela.webp" 
+         alt="Nelson Mandela" width="300">
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <!-- Section "About" avec description et audio sur l'inspiration de Mandela -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Nelson Mandela was a South African anti-apartheid revolutionary, political leader,
+      and philanthropist who served as President of South Africa from 1994 to 1999.
+      He was the country's first black head of state and the first elected in a fully democratic election.
+    </p>
+
+    <!-- Sous-section sur son message sur l'éducation -->
+    <h3>Inspiration on Learning</h3>
+    <p>
+      Mandela believed that education is the foundation of freedom. Listen to one of his speeches about learning:
+    </p>
+
+    <!-- Éléments audio intégrés -->
+    <audio controls>
+      <source src="./assets/audio/mandela.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Citation inspirante -->
+    <p><em>“Education is the most powerful weapon which you can use to change the world.”</em></p>
+  </section>
+
+  <!-- ==================== WORK SECTION ==================== -->
+  <!-- Section "Work & Achievements" avec liste de ses accomplissements -->
+  <section id="work">
+    <h2>Work & Achievements</h2>
+    <ul>
+      <li>Leader of the African National Congress (ANC)</li>
+      <li>Imprisoned for 27 years for fighting against apartheid</li>
+      <li>First Black President of South Africa (1994–1999)</li>
+      <li>Recipient of the Nobel Peace Prize (1993)</li>
+    </ul>
+
+    <!-- Vidéo intégrée pour montrer son histoire inspirante -->
+    <h3>Watch his inspiring story</h3>
+    <video width="400" controls>
+      <source src="./assets/video/mandela.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- ==================== RESUME SECTION ==================== -->
+  <!-- Section "Resume" avec un tableau récapitulatif de sa vie -->
+  <section id="resume">
+    <h2>Timeline Summary</h2>
+    <table border="1">
+      <!-- En-tête du tableau -->
+      <tr>
+        <th>Year</th>
+        <th>Event</th>
+      </tr>
+      <!-- Contenu du tableau -->
+      <tr>
+        <td>1918</td>
+        <td>Born in Mvezo, South Africa</td>
+      </tr>
+      <tr>
+        <td>1962</td>
+        <td>Imprisoned for anti-apartheid activism</td>
+      </tr>
+      <tr>
+        <td>1990</td>
+        <td>Released from prison after 27 years</td>
+      </tr>
+      <tr>
+        <td>1994</td>
+        <td>Elected President of South Africa</td>
+      </tr>
+      <tr>
+        <td>2013</td>
+        <td>Passed away, leaving a global legacy of peace and education</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <!-- Section "Contact" avec formulaire pour envoyer un message -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Contact the Nelson Mandela Foundation</p>
+    <form>
+      <!-- Champ pour le nom -->
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <!-- Champ pour l'email -->
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <!-- Champ pour le message -->
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+
+      <!-- Bouton d'envoi -->
+      <input type="submit" value="Send">
+    </form>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <!-- Pied de page avec copyright -->
+  <footer>
+    <p>© 2025 Nelson Mandela Portfolio Project | HTML Basics Checkpoint</p>
+  </footer>
+
+</body>
+</html>
