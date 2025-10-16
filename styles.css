@@ -1,7 +1,18 @@
-/* ===== Import Roboto font ===== */
+/* ===== Import de la police =====
+   Importation de la famille Roboto depuis Google Fonts.
+   Remarque : pour de meilleures performances, préférez <link> dans le HTML. */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* ===== General styles ===== */
+/* ===== Global : box-sizing =====
+   Utiliser border-box pour un calcul de largeur/padding prévisible. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ===== Styles généraux =====
+   Police par défaut, couleurs de fond, marges et interlignage. */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -11,7 +22,8 @@ body {
     color: #333;
 }
 
-/* ===== Navbar styles ===== */
+/* ===== Barre de navigation =====
+   Mise en page en flexbox, espacement et style des liens. */
 nav {
     background-color: #222;
     color: white;
@@ -41,22 +53,25 @@ nav a {
     transition: background 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus,
+nav a:focus-visible {
     background-color: #555;
+    outline: none;
 }
 
-/* ===== Sections ===== */
+/* ===== Sections =====
+   Conteneur central avec largeur max, fond blanc, arrondis et ombre. */
 section {
     padding: 50px 20px;
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 40px auto 20px; /* fusion des marges top/side/bottom */
     background-color: white;
-    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Home Section */
+/* Section d'accueil : centrage et image présentable */
 #home {
     text-align: center;
 }
@@ -65,11 +80,14 @@ section {
     display: block;
     margin: 20px auto;
     border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
-/* ===== Headings with ergonomic color ===== */
+/* ===== Titres =====
+   Couleurs ergonomiques et décoration pour hiérarchie visuelle. */
 h1 {
-    color: #00796b; /* Vert sarcelle foncé pour accent professionnel */
+    color: #00796b; /* Vert sarcelle foncé */
     border-bottom: 3px solid #00bcd4; /* ligne décorative */
     display: inline-block;
     padding-bottom: 5px;
@@ -83,7 +101,8 @@ h3 {
     color: #5d4037; /* Brun chaud pour contraste doux */
 }
 
-/* Video */
+/* ===== Vidéo =====
+   Centrage et comportement responsive pour <video>. */
 video {
     display: block;
     margin: 20px auto;
@@ -91,7 +110,8 @@ video {
     border-radius: 10px;
 }
 
-/* Table styling */
+/* ===== Tableaux =====
+   Lisibilité : pleine largeur, bordures et en-têtes contrastés. */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -109,26 +129,29 @@ th {
     color: white;
 }
 
-/* Form styling */
+/* ===== Formulaires =====
+   Champs texte et textarea en 100% (border-box actif), focus accessible. */
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    width: 98%;
+    width: 100%; /* sûr grâce à box-sizing:border-box */
     padding: 8px;
     margin-top: 5px;
     margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.2s;
 }
 
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form textarea:focus {
     border-color: #0288d1;
+    box-shadow: 0 0 0 3px rgba(2,136,209,0.12);
     outline: none;
 }
 
+/* Bouton d'envoi : styles et retour visuel au survol/focus */
 form input[type="submit"] {
     padding: 10px 20px;
     background-color: #0288d1;
@@ -136,14 +159,30 @@ form input[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.08s;
 }
 
-form input[type="submit"]:hover {
+form input[type="submit"]:hover,
+form input[type="submit"]:focus,
+form input[type="submit"]:focus-visible {
     background-color: #007bb5;
+    transform: translateY(-1px);
+    outline: none;
 }
 
-/* Footer */
+/* ===== Accessibilité : états focus visibles pour éléments interactifs ===== */
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible,
+input:focus,
+textarea:focus {
+    outline: 3px solid rgba(2,136,209,0.18);
+    outline-offset: 2px;
+}
+
+/* ===== Pied de page =====
+   Centrage du texte et fond sombre pour contraste. */
 footer {
     text-align: center;
     padding: 20px;
