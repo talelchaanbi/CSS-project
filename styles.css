@@ -15,21 +15,22 @@ body {
 nav {
     background-color: #222;
     color: white;
-    padding: 5px 20px;       /* hauteur réduite */
-    display: flex;           /* flexbox pour centrer */
-    align-items: center;     /* centre verticalement */
-    justify-content: center; /* centre horizontalement */
-    gap: 30px;               /* espace entre titre et liens */
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
 nav h2 {
-    margin: 0;               /* supprime margin qui repousse */
+    margin: 0;
     font-weight: 700;
+    color: #00bcd4; /* accent turquoise ergonomique */
 }
 
 nav .nav-links {
     display: flex;
-    gap: 15px;               /* espace entre les liens */
+    gap: 15px;
 }
 
 nav a {
@@ -57,26 +58,35 @@ section {
 
 /* Home Section */
 #home {
-    text-align: center; /* centre le texte */
+    text-align: center;
 }
 
 #home img {
     display: block;
-    margin: 20px auto; /* centre l'image */
+    margin: 20px auto;
     border-radius: 10px;
 }
 
-/* Headings */
-h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
-    color: #222;
-    margin-bottom: 15px;
+/* ===== Headings with ergonomic color ===== */
+h1 {
+    color: #00796b; /* Vert sarcelle foncé pour accent professionnel */
+    border-bottom: 3px solid #00bcd4; /* ligne décorative */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+h2 {
+    color: #0288d1; /* Bleu doux ergonomique */
+}
+
+h3 {
+    color: #5d4037; /* Brun chaud pour contraste doux */
 }
 
 /* Video */
 video {
     display: block;
-    margin: 20px auto; /* centre la vidéo */
+    margin: 20px auto;
     max-width: 100%;
     border-radius: 10px;
 }
@@ -103,7 +113,7 @@ th {
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    width: 100%;
+    width: 98%;
     padding: 8px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -115,13 +125,13 @@ form textarea {
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form textarea:focus {
-    border-color: #222;
+    border-color: #0288d1;
     outline: none;
 }
 
 form input[type="submit"] {
     padding: 10px 20px;
-    background-color: #222;
+    background-color: #0288d1;
     color: white;
     border: none;
     border-radius: 5px;
@@ -130,7 +140,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #007bb5;
 }
 
 /* Footer */
